@@ -34,7 +34,7 @@ const getVehicleServices = async (sidToken) =>{
       });
 
 
-      const vehicleData = vehicleList.data;
+      const vehicleData = vehicleList.data.items;
       return vehicleData;
 
       } catch (error) {
