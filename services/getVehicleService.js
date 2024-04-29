@@ -34,12 +34,8 @@ const getVehicleServices = async (sidToken) =>{
       });
 
 
-    //   const responseData = vehicleList;
-        console.log(vehicleList);  
-
-      
-    //   const vehicleData = responseData;
-      return vehicleList.searchSpec;
+      const vehicleData = responseData.data;
+      return vehicleData;
 
       } catch (error) {
         console.error(error); // `error` will be whatever you passed to `reject()` at the top
