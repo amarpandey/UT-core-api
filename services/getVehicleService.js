@@ -18,7 +18,8 @@ const getVehicleServices = async (sidToken) =>{
           }
       });
      
-      let token = res.data.eid;
+      let sid = res.data.eid;
+      console.log('sid' + sid);
 
       // Making vehicle detail call
       console.log(`welcome to get vehicle data`);
@@ -28,13 +29,13 @@ const getVehicleServices = async (sidToken) =>{
           params:{
               svc: 'core/search_items',
               params: '{"spec":{"itemsType":"avl_unit","propName":"sys_name","propValueMask":"*","sortType":"sys_name"},"force":1,"flags":1,"from":0,"to":0}',
-              sid: token
+              sid: sid
           }
       });
 
 
-      const responseData = vehicleList;
-    //   console.log(responseData);  
+    //   const responseData = vehicleList;
+        console.log(vehicleList);  
 
       
     //   const vehicleData = responseData;
