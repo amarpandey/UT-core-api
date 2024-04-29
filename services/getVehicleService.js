@@ -33,7 +33,7 @@ const getVehicleServices = async (sidToken) =>{
       });
 
 
-      const responseData = vehicleList.items;
+      const responseData = vehicleList;
       console.log(responseData);  
 
       
