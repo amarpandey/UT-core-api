@@ -8,5 +8,6 @@ router.route("/").get((req, res)=>{
     res.send('Welcome to Ultratech vehicle report service');
 });
 router.route("/getvehicleslist").get(getVehicleController)
+router.route("/getreport").get(getVehicleReportController)
 
 module.exports = router; 
