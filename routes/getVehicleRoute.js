@@ -3,7 +3,7 @@ console.log('inside route');
 const express = require('express');
 const router = express.Router();
 const getVehicleController = require('../controllers/getVehicleController');
-const getVehicleController = require('../controllers/getVehicleReportController');
+const getVehicleReportController = require('../controllers/getVehicleReportController');
 
 router.route("/").get((req, res)=>{
     res.send('Welcome to Ultratech vehicle report service');
