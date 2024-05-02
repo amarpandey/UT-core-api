@@ -25,7 +25,8 @@ app.use(cors(corsOptions));
 
 app.set('json spaces', 2)
 app.use("/", vehicleRoutes);
-app.use("/getVehicles", vehicleRoutes);
+app.use("/getvehicleslist", vehicleRoutes);
+app.use("/getreport", vehicleRoutes);
 
 
 
