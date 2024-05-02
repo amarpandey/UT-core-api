@@ -4,7 +4,7 @@ const { report } = require('process');
 
 
 
-const getVehicleServices = async (sidToken) =>{
+const getVehicleServices = async (sidToken, reportFrom, reportTo, report) =>{
     try {
       console.log(`welcome to get vehicle service`);
       // return 'hello';
