@@ -32,12 +32,12 @@ const getVehicleServices = async (token, reportFrom, reportTo, report) =>{
             params:{
                 svc: 'report/exec_report',
                 params: '{"reportResourceId":26039013,"reportTemplateId":7,"reportTemplate":null,"reportObjectId":"26121320","reportObjectSecId":0,"interval":{"from":'+reportFrom+',"to":'+reportTo+',"flags":0}}',
-                sid: token
+                sid: sid
             }
         });
 
         console.log(vehicleReport);
-        const resultRows = vehicleReport;
+        const resultRows = vehicleReport.layerCount;
         console.log(resultRows);  
 
         // Fetching result rows
@@ -48,7 +48,7 @@ const getVehicleServices = async (token, reportFrom, reportTo, report) =>{
             params:{
                 svc: 'report/get_result_rows',
                 params: '{"tableIndex":0,"indexFrom":0,"indexTo":100}',
-                sid: token
+                sid: sid
             }
         });
 
@@ -68,7 +68,7 @@ const getVehicleServices = async (token, reportFrom, reportTo, report) =>{
             ]
             },
             {
-            "data": resultRowsData.data
+            "data":resultRowsData.data
             }
         ];
 
