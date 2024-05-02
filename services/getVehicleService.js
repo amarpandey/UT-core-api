@@ -26,7 +26,7 @@ const getVehicleServices = async (token, reportFrom, reportTo, report) =>{
         console.log('Inside data report ::');
         // Making vehicle detail call
         console.log(`welcome to get vehicle data`);
-        const vehicleDetails = await axios({
+        const vehicleReport = await axios({
             method: 'get',
             url:'https://hst-api.wialon.com/wialon/ajax.html',
             params:{
@@ -36,8 +36,8 @@ const getVehicleServices = async (token, reportFrom, reportTo, report) =>{
             }
         });
 
-
-        const resultRows = vehicleDetails.layerCount;
+        console.log(vehicleReport);
+        const resultRows = vehicleReport;
         console.log(resultRows);  
 
         // Fetching result rows
