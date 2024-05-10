@@ -6,7 +6,7 @@ const getVehicleDetails = async (req, res)=>{
         console.log('inside getVehicleDetails report controller:: ');
         // Calling getVehicle service 
         const userToken = req.query.token;
-        const validToken = (userToken == 'dcc921361dbab401f92cbfb7c6a8752d49171B5760B97B650D5697E3C526857D0CBBF907') ? true : false;
+        const validToken = (userToken == 'bf47aba64fc9c34903b783df2d49d38f75F26D19B1833ED8DB6EFBC1C0D6668559333C48') ? true : false;
         if(validToken){
             const reportFrom = (new Date(req.query.from).getTime() / 1000);
             const reportTo = (new Date(req.query.to).setHours(23, 59) / 1000);
